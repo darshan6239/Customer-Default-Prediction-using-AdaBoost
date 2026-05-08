@@ -34,7 +34,6 @@ df['Current_loan_status'] = label_encoder.fit_transform(df['Current_loan_status'
 X = df.drop(['customer_id', 'Current_loan_status'], axis=1)
 y = df['Current_loan_status']
 
-
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 imputer = SimpleImputer(strategy='mean')
