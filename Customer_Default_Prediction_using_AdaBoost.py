@@ -11,6 +11,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 df = pd.read_csv('/content/LoanDataset---LoansDatasest.csv')
 df.head()
 
+
 numerical_cols = df.select_dtypes(include=['float64', 'int64']).columns
 df[numerical_cols] = df[numerical_cols].fillna(df[numerical_cols].mean())
 
