@@ -23,7 +23,6 @@ for col in columns_to_clean:
     df[col] = pd.to_numeric(df[col], errors='coerce')
 
 label_encoder = LabelEncoder()
-
 df['home_ownership'] = label_encoder.fit_transform(df['home_ownership'])
 df['loan_intent'] = label_encoder.fit_transform(df['loan_intent'])
 df['loan_grade'] = label_encoder.fit_transform(df['loan_grade'])
