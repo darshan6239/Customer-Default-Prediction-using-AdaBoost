@@ -18,7 +18,6 @@ categorical_cols = df.select_dtypes(include=['object']).columns
 for col in categorical_cols:
     df[col] = df[col].fillna(df[col].mode()[0])columns_to_clean = ['customer_income', 'loan_amnt']
 
-
 for col in columns_to_clean:
     df[col] = df[col].replace({',': ''}, regex=True)
     df[col] = pd.to_numeric(df[col], errors='coerce')
